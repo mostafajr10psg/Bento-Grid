@@ -76,41 +76,41 @@ main {
 @media (min-width: 992px) {
   main {
     width: 925px;
-    grid-template-areas:
-      "c-post s-media s-media sc"
-      "ai manage maintain sc"
-      "ai grow followers followers ";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 270px 50px 120px 1fr;
   }
   .c-post {
-    grid-area: c-post;
+    grid-row: 1 / span 2;
   }
 
   .s-media {
-    grid-area: s-media;
+    grid-column: 2 / span 2;
   }
 
   .sc {
-    grid-area: sc;
+    grid-row: 1 / 4;
+    grid-column: 4 / 5;
   }
 
   .manage {
-    grid-area: manage;
+    grid-row: 2 / span 2;
   }
 
   .maintain {
-    grid-area: maintain;
+    grid-row: 2 / span 2;
   }
 
   .ai {
-    grid-area: ai;
+    grid-row: 3 / span 2;
   }
 
   .grow {
-    grid-area: grow;
+    grid-row: 4 / 5;
   }
 
   .followers {
-    grid-area: followers;
+    grid-row: 4 / 5;
+    grid-column: 3 / span 2;
   }
 }
 
@@ -123,13 +123,6 @@ main div {
 .c-post {
   background-color: var(--y-100-color);
   padding: 20px;
-}
-
-@media (min-width: 992px) {
-  .c-post {
-    grid-row: 1 / 3;
-    height: 340px;
-  }
 }
 
 .c-post p {
@@ -245,7 +238,7 @@ main div {
 }
 
 .sc img {
-  width: 270px;
+  width: 300px;
   margin: 20px 0;
 }
 
@@ -282,7 +275,7 @@ main div {
 .manage p {
   font-weight: 500;
   letter-spacing: -2px;
-  line-height: var(--line-h);
+  line-height: 0.8;
   font-size: 28px;
 }
 
@@ -325,7 +318,7 @@ main div {
 .maintain p {
   font-weight: 500;
   letter-spacing: -2px;
-  line-height: var(--line-h);
+  line-height: 0.8;
   font-size: 28px;
 }
 
@@ -372,13 +365,6 @@ main div {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-@media (min-width: 992px) {
-  .ai {
-    height: 340px;
-    align-self: flex-end;
-  }
 }
 
 @media (min-width: 835px) and (max-width: 991px) {
