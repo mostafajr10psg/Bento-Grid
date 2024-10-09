@@ -71,13 +71,12 @@ main {
   }
 }
 
-/* Grid Layout With Grid-template-areas */
+/* Grid Layout */
 
 @media (min-width: 992px) {
   main {
     width: 925px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 270px 50px 120px 1fr;
   }
   .c-post {
     grid-row: 1 / span 2;
